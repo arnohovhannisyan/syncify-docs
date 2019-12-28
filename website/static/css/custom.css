@@ -1,0 +1,50 @@
+body {
+  font-family: var(--default);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+.wrapper {
+  margin: 0 !important;
+  max-width: 100% !important;
+}
+
+.gridBlock > * {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.gridBlock > * .blockImage {
+  width: 7rem !important;
+  height: 7rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.gridBlock > * .blockContent p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+a {
+  color: #388d82;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #56b4a7;
+}
+
+article::before {
+  display: none;
+}
