@@ -1,7 +1,8 @@
 ---
-id: language-support
+id: version-v3.12.1-language-support
 title: Add or Improve Language Support
 sidebar_label: Language Support
+original_id: language-support
 ---
 
 ## Where are the language files?

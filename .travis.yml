@@ -1,0 +1,29 @@
+language: node_js
+node_js: node
+
+dist: bionic
+
+before_install: cd website
+
+cache: yarn
+install: yarn
+
+before_script: skip
+
+script:
+  - yarn build
+  - rm -rf `ls -a | sed "/^build$/d; /^\.$/d; /^\.\.$/d"`
+  - mv build ../..
+  - cd ..
+  - rm -rf `ls -a`
+  - mv ../build/* .
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  repo: arnohovhannisyan/vscode-syncify
+  target-branch: gh-pages
+  on:
+    branch: master

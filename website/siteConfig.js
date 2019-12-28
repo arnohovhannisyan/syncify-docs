@@ -4,6 +4,9 @@ const siteConfig = {
   url: "https://arnohovhannisyan.space",
   baseUrl: "/vscode-syncify/",
 
+  projectName: "vscode-syncify",
+  organizationName: "arnohovhannisyan",
+
   headerLinks: [
     { doc: "getting-started/installation", label: "Docs" },
     { blog: true, label: "Updates" }
@@ -27,7 +30,7 @@ const siteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} Arno Hovhannisyan`,
 
   highlight: {
-    theme: "default"
+    theme: "atom-one-dark"
   },
 
   scripts: [],

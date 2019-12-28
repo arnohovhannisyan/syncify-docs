@@ -1,0 +1,20 @@
+{
+  "version-v3.12.1-docs": {
+    "Getting Started": [
+      "version-v3.12.1-getting-started/installation",
+      "version-v3.12.1-getting-started/prerequisites",
+      "version-v3.12.1-getting-started/setup",
+      "version-v3.12.1-getting-started/configuring"
+    ],
+    "Contributing": [
+      "version-v3.12.1-contributing/prerequisites",
+      "version-v3.12.1-contributing/language-support"
+    ],
+    "Features": [
+      "version-v3.12.1-features/profiles",
+      "version-v3.12.1-features/custom-files",
+      "version-v3.12.1-features/custom-extensions",
+      "version-v3.12.1-features/sync-pragmas"
+    ]
+  }
+}
