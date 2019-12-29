@@ -55,6 +55,9 @@ function Home() {
     <Layout title={siteConfig.title}>
       <header className={classnames("hero hero--primary", styles.heroBanner)}>
         <div className="container">
+          <div>
+            <img alt="Syncify Logo" src={useBaseUrl("img/logo.svg")} />
+          </div>
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
