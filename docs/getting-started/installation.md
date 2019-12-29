@@ -6,11 +6,9 @@ title: Installation
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-<Tabs defaultValue="panel" values={
-[{ label: "Using Extension Panel", value: "panel" }, { label: "Using Command Palette", value: "palette" }]
-}>
+<Tabs>
 
-<TabItem value="panel">
+<TabItem value="Using Extension Panel" default>
 
 1. Open the extensions panel: `Ctrl+Shift+X` (`⌘` on Mac)
 2. Type `syncify`
@@ -18,7 +16,7 @@ import TabItem from "@theme/TabItem";
 
 </TabItem>
 
-<TabItem value="palette">
+<TabItem value="Using Command Palette">
 
 1. Open the command palette: `Ctrl+P` (`⌘` on Mac)
 2. Type `ext install arnohovhannisyan.syncify`

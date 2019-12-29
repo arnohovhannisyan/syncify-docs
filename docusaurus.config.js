@@ -78,10 +78,14 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve("./sidebars.js")
+          sidebarPath: require.resolve("./sidebars.js"),
+          editUrl:
+            "https://github.com/arnohovhannisyan/syncify-docs/edit/master/",
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css")
+          customCss: require.resolve("./src/css/main.css")
         }
       }
     ]

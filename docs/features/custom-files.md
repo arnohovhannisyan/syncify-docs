@@ -8,15 +8,15 @@ import TabItem from "@theme/TabItem";
 
 ## Registering a Custom File
 
-<Tabs defaultValue="gui" values={[{ label: "Using the GUI", value: "gui" }, { label: "Using Command Palette", value: "palette" }]}>
+<Tabs>
 
-<TabItem value="gui">
+<TabItem value="Using the GUI" default>
 
 1. Right-click a file and click `Sync: Register Custom File`.
 
 </TabItem>
 
-<TabItem value="palette">
+<TabItem value="Using Command Palette">
 
 1. Run `Sync: Register Custom File` in the command palette
 2. Select the file you want to register using the file picker

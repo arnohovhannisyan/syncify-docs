@@ -15,9 +15,9 @@ Create Fork
 
 ## Clone your Fork
 
-<Tabs defaultValue="ssh" values={[{ label: "HTTPS", value: "https" }, { label: "SSH", value: "ssh" }]}>
+<Tabs>
 
-<TabItem value="https">
+<TabItem value="HTTPS">
 
 ```sh
 git clone https://github.com/<user>/vscode-syncify --recurse-submodules
@@ -25,7 +25,7 @@ git clone https://github.com/<user>/vscode-syncify --recurse-submodules
 
 </TabItem>
 
-<TabItem value="ssh">
+<TabItem value="SSH" default>
 
 ```sh
 git clone git@github.com:<user>/vscode-syncify --recurse-submodules

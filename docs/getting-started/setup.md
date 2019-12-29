@@ -6,11 +6,9 @@ title: Setup
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-<Tabs defaultValue="https" values={
-[{ label: "Using HTTPS", value: "https" }, { label: "Using SSH", value: "ssh" }]
-}>
+<Tabs>
 
-<TabItem value="https">
+<TabItem value="Using HTTPS" default>
 
 > This method requires Syncify to ask for full control over your public and private repositories, however, this is a limitation of the APIs provided by GitHub, GitLab, and BitBucket. If you are worried about security, feel free to set up Syncify using SSH.
 
@@ -34,7 +32,7 @@ Finally, open the Command Palette (`Ctrl`+`Shift`+`P`) and run `Syncify: Upload`
 
 </TabItem>
 
-<TabItem value="ssh">
+<TabItem value="Using SSH">
 
 SSH can be used to authenticate securely with your remote repository without exposing any tokens to Syncify.
 

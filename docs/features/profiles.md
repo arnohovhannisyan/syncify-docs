@@ -12,9 +12,9 @@ Syncify supports using profiles to have different settings for different occasio
 
 ## Creating a New Profile
 
-<Tabs defaultValue="gui" values={[{ label: "Using the GUI", value: "gui" }, { label: "Manually", value: "manual" }]}>
+<Tabs>
 
-<TabItem value="gui">
+<TabItem value="Using the GUI" default>
 
 1. Run `Syncify: Open Settings` in the command palette
 2. Scroll down to the `Repo Syncer -> Profiles` section
@@ -23,7 +23,7 @@ Syncify supports using profiles to have different settings for different occasio
 
 </TabItem>
 
-<TabItem value="manual">
+<TabItem value="Manually">
 
 1. Run `Syncify: Open Settings` in the command palette
 2. Click `Open file in editor`
