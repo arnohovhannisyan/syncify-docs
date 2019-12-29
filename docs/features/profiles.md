@@ -3,8 +3,8 @@ id: profiles
 title: Profiles
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 Syncify supports using profiles to have different settings for different occasions.
 

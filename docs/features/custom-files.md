@@ -3,8 +3,8 @@ id: custom-files
 title: Custom Files
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 ## Registering a Custom File
 

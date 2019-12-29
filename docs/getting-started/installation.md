@@ -3,8 +3,8 @@ id: installation
 title: Installation
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 <Tabs defaultValue="panel" values={
 [{ label: "Using Extension Panel", value: "panel" }, { label: "Using Command Palette", value: "palette" }]

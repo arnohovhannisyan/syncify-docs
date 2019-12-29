@@ -9,48 +9,48 @@ import styles from "./styles.module.css";
 const features = [
   {
     title: "Quick Setup",
-    imageUrl: "img/quick_setup.svg"
+    imageUrl: "quick_setup.svg"
   },
   {
     title: "Custom Files",
-    imageUrl: "img/custom_files.svg"
+    imageUrl: "custom_files.svg"
   },
   {
     title: "Profiles",
-    imageUrl: "img/profiles.svg"
+    imageUrl: "profiles.svg"
   },
   {
     title: "Custom Extensions",
-    imageUrl: "img/custom_extensions.svg"
+    imageUrl: "custom_extensions.svg"
   },
   {
     title: "Conflict Resolution",
-    imageUrl: "img/conflict_resolution.svg"
+    imageUrl: "conflict_resolution.svg"
   },
   {
     title: "Intuitive Interface",
-    imageUrl: "img/intuitive_interface.svg"
+    imageUrl: "intuitive_interface.svg"
   }
 ];
 
-function Feature({ imageUrl, title, description }) {
-  const imgUrl = useBaseUrl(imageUrl);
+function Feature({ imageUrl, title, description = "" }) {
+  const imgUrl = useBaseUrl(`img/${imageUrl}`);
   return (
     <div className="col col--4">
       {imgUrl && (
-        <div className={`text--center ${styles.featureContainer}`}>
+        <div className={classnames("text--center", styles.featureContainer)}>
           <img src={imgUrl} alt={title} />
         </div>
       )}
       <h3 className="text--center">{title}</h3>
-      <p>{description}</p>
+      <p className={styles.featureDescription}>{description}</p>
     </div>
   );
 }
 
 function Home() {
-  const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
+  const { siteConfig = {} } = useDocusaurusContext();
+
   return (
     <Layout title={siteConfig.title}>
       <header className={classnames("hero hero--primary", styles.heroBanner)}>
@@ -59,10 +59,7 @@ function Home() {
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link
-              className={classnames(
-                "button button--outline button--secondary button--lg",
-                styles.getStarted
-              )}
+              className="button button--outline button--secondary button--lg"
               to={useBaseUrl("docs/getting-started/installation")}
             >
               Get Started

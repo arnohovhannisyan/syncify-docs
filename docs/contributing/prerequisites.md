@@ -3,12 +3,17 @@ id: prerequisites
 title: Prerequisites
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Button from "../../src/components/Button";
 
-## Clone the Project
+## Fork the Project
 
-Before contributing to Syncify, you must first create your own fork of it and clone it to your machine.
+<Button href="https://github.com/arnohovhannisyan/vscode-syncify/fork">
+Create Fork
+</Button>
+
+## Clone your Fork
 
 <Tabs defaultValue="ssh" values={[{ label: "HTTPS", value: "https" }, { label: "SSH", value: "ssh" }]}>
 
@@ -30,29 +35,13 @@ git clone git@github.com:<user>/vscode-syncify --recurse-submodules
 
 </Tabs>
 
-> The `--recurse-submodules` flag is required as Syncify uses submodules
-
 ## Install Dependencies
 
-<Tabs defaultValue="yarn" values={[{ label: "npm", value: "npm" }, { label: "Yarn", value: "yarn" }]}>
-
-<TabItem value="npm">
+Syncify uses [Yarn][yarn] to manage its dependencies, so please install it before
 
 ```sh
-npm install
+yarn install
 ```
-
-</TabItem>
-
-<TabItem value="yarn">
-
-```sh
-yarn
-```
-
-</TabItem>
-
-</Tabs>
 
 ## Create Branch
 

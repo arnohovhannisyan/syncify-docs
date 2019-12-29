@@ -3,8 +3,8 @@ id: setup
 title: Setup
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 <Tabs defaultValue="https" values={
 [{ label: "Using HTTPS", value: "https" }, { label: "Using SSH", value: "ssh" }]

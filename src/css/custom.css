@@ -16,6 +16,17 @@
   --ifm-code-font-size: 95%;
 }
 
+.markdown {
+  --ifm-heading-vertical-rhythm-bottom: 0.5;
+  --ifm-h2-vertical-rhythm-top: 1.5;
+  --ifm-h3-vertical-rhythm-top: 1.5;
+  --ifm-h4-vertical-rhythm-top: 1.5;
+}
+
+.docTitle_node_modules-\@docusaurus-theme-classic-src-theme-DocItem- {
+  margin-bottom: 1.5rem !important;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
   display: block;
