@@ -37,7 +37,7 @@ git clone git@github.com:<user>/vscode-syncify --recurse-submodules
 
 ## Install Dependencies
 
-Syncify uses [Yarn][yarn] to manage its dependencies, so please install it before
+Syncify uses [Yarn][yarn] to manage its dependencies, so please install it if you don't already have it.
 
 ```sh
 yarn install
