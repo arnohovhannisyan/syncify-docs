@@ -16,6 +16,9 @@ const keys = {
   right: 39
 };
 
+/**
+ * @param {{ block: boolean, children: JSX.Element[] }} props
+ */
 function Tabs({ block, children }) {
   const values = children.map(node => ({
     label: node.props.value,

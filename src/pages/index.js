@@ -55,17 +55,17 @@ function Feature({ imageUrl, title, description = "" }) {
 }
 
 function Home() {
-  const { siteConfig } = useDocusaurusContext();
+  const { title, tagline } = useDocusaurusContext().siteConfig;
 
   return (
-    <Layout title={siteConfig.title}>
+    <Layout title={title}>
       <header className={classnames("hero hero--primary", styles.heroBanner)}>
         <div className="container">
           <div>
             <img alt="Syncify Logo" src={useBaseUrl("img/logo.svg")} />
           </div>
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <h1 className="hero__title">{title}</h1>
+          <p className="hero__subtitle">{tagline}</p>
           <div className={styles.buttons}>
             <Link
               className="button button--outline button--secondary button--lg"

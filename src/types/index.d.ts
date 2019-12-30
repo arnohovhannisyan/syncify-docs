@@ -3,28 +3,9 @@ declare module "@docusaurus/useBaseUrl" {
 }
 
 declare module "@docusaurus/useDocusaurusContext" {
-  interface SiteConfig {
-    plugins: any[];
-    themes: any[];
-    customFields: any;
-    themeConfig: any;
-    title: string;
-    tagline: string;
-    url: string;
-    baseUrl: string;
-    favicon: string;
-    organizationName: string;
-    projectName: string;
-    presets: [string, object][];
-    [key: string]: any;
-  }
+  import { DocusaurusContext } from "@docusaurus/types";
 
-  interface Context {
-    siteConfig: SiteConfig;
-    isClient: boolean;
-  }
-
-  export default () => 0 as Context;
+  export default () => 0 as DocusaurusContext;
 }
 
 declare module "@docusaurus/Link" {
