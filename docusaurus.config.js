@@ -9,10 +9,6 @@ module.exports = {
   themeConfig: {
     navbar: {
       title: "Syncify",
-      logo: {
-        alt: "Syncify Logo",
-        src: "img/logo.svg"
-      },
       links: [
         {
           to: "docs/getting-started/installation",

@@ -6,6 +6,9 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
 
+/**
+ * @type {Feature[]}
+ */
 const features = [
   {
     title: "Quick Setup",
@@ -33,6 +36,9 @@ const features = [
   }
 ];
 
+/**
+ * @param {Feature} props
+ */
 function Feature({ imageUrl, title, description = "" }) {
   const imgUrl = useBaseUrl(`img/${imageUrl}`);
   return (
@@ -49,7 +55,7 @@ function Feature({ imageUrl, title, description = "" }) {
 }
 
 function Home() {
-  const { siteConfig = {} } = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
 
   return (
     <Layout title={siteConfig.title}>
@@ -71,17 +77,15 @@ function Home() {
         </div>
       </header>
       <main>
-        {features && features.length && (
-          <section className={styles.features}>
-            <div className="container">
-              <div className="row">
-                {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
-                ))}
-              </div>
+        <section className={styles.features}>
+          <div className="container">
+            <div className="row">
+              {features.map((props, idx) => (
+                <Feature key={idx} {...props} />
+              ))}
             </div>
-          </section>
-        )}
+          </div>
+        </section>
       </main>
     </Layout>
   );
