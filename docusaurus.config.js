@@ -3,7 +3,7 @@ module.exports = {
   tagline: "A reliable way of syncing your VSCode settings and extensions",
   url: "https://arnohovhannisyan.space",
   baseUrl: "/vscode-syncify/",
-  favicon: "img/logo.svg",
+  favicon: "img/favicon.png",
   organizationName: "arnohovhannisyan",
   projectName: "vscode-syncify",
   themeConfig: {
