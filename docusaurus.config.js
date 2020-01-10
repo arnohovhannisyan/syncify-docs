@@ -7,6 +7,10 @@ module.exports = {
   organizationName: "arnohovhannisyan",
   projectName: "vscode-syncify",
   themeConfig: {
+    algolia: {
+      apiKey: "cb827d79bcc9d365ebdf80d97ed09030",
+      indexName: "syncify"
+    },
     navbar: {
       title: "Syncify",
       links: [
