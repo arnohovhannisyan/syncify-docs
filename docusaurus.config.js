@@ -28,7 +28,6 @@ module.exports = {
       hideOnScroll: true
     },
     footer: {
-      style: "dark",
       links: [
         {
           title: "Docs",

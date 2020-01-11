@@ -11,6 +11,10 @@
   }
 }
 
+html[data-theme=""] .logo {
+  filter: invert(1);
+}
+
 .buttons {
   display: flex;
   align-items: center;

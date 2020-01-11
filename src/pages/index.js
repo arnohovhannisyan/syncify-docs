@@ -59,16 +59,20 @@ function Home() {
 
   return (
     <Layout title={title}>
-      <header className={classnames("hero hero--primary", styles.heroBanner)}>
+      <header className={classnames("hero shadow--lw", styles.heroBanner)}>
         <div className="container">
           <div>
-            <img alt="Syncify Logo" src={useBaseUrl("img/logo.svg")} />
+            <img
+              alt="Syncify Logo"
+              src={useBaseUrl("img/logo.svg")}
+              className={styles.logo}
+            />
           </div>
           <h1 className="hero__title">{title}</h1>
           <p className="hero__subtitle">{tagline}</p>
           <div className={styles.buttons}>
             <Link
-              className="button button--outline button--secondary button--lg"
+              className="button button--secondary button--lg"
               to={useBaseUrl("docs/getting-started/installation")}
             >
               Get Started

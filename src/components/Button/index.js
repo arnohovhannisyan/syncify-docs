@@ -9,7 +9,7 @@ function Button({ href, children }) {
   return (
     <a
       className={classnames(
-        "button button--outline button--secondary button--lg",
+        "button button--secondary button--lg",
         styles.button
       )}
       href={href}
