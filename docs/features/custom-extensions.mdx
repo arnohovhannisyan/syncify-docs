@@ -1,5 +1,4 @@
 ---
-id: custom-extensions
 title: Custom Extensions
 ---
 
@@ -7,9 +6,7 @@ Syncify supports syncing extensions that are not in the VSCode Marketplace.
 
 ## Adding a Custom Extension
 
-1. Copy the VSIX file to the [`vsix`][term:vsix] folder
-
-> This folder probably won't exist if this is your first custom extension, in which case you must create it yourself.
+1. Copy the VSIX file to the [vsix folder][term:vsix], creating the folder if it doesn't already exist
 
 > The VSIX file's name should be one of the following:
 >
@@ -23,7 +20,7 @@ Syncify supports syncing extensions that are not in the VSCode Marketplace.
 ## Removing a Custom Extension
 
 1. Make sure your custom extension is [disabled](#disabling-a-custom-extension)
-2. Navigate to the [`vsix`][term:vsix] folder
+2. Navigate to the [vsix folder][term:vsix]
 3. Delete the VSIX file corresponding to the extension
 4. Upload your changes by running `Syncify: Upload`
 
@@ -43,4 +40,4 @@ Syncify supports syncing extensions that are not in the VSCode Marketplace.
 1. Uninstall the extension
 2. Run `Syncify: Upload` in the command palette to upload your changes
 
-[term:vsix]: https://github.com/arnohovhannisyan/vscode-syncify/wiki/Common-Terms#vsix-folder
+[term:vsix]: ../common-terms.mdx#vsix-folder

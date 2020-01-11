@@ -1,5 +1,4 @@
 ---
-id: sync-pragmas
 title: Sync Pragmas
 ---
 
@@ -7,18 +6,18 @@ Syncify supports per-os, per-host, and per-env inline settings and keybindings b
 
 ## Ignoring Certain Settings
 
-You can ignore certain settings in `settings.json` or `keybindings.json` by using the `@sync-ignore` pragma.
+You can ignore certain properties in any `json` file by placing the `@sync-ignore` pragma above it.
 
-```
+```json
 // settings.json
 
 {
   // @sync-ignore
-  "window.zoomLevel": "1", /* won't upload to gist */
+  "window.zoomLevel": 1 /* won't upload to gist */
 }
 ```
 
-```
+```json
 // keybindings.json
 
 [
@@ -27,7 +26,7 @@ You can ignore certain settings in `settings.json` or `keybindings.json` by usin
     "key": "alt+v",
     "command": "workbench.action.closeActiveEditor",
     "when": "editorTextFocus"
-  }, /* won't upload to gist */
+  } /* won't upload to gist */
 ]
 ```
 
@@ -35,26 +34,26 @@ You can ignore certain settings in `settings.json` or `keybindings.json` by usin
 
 There are 3 different keywords that can be used with Sync Pragmas:
 
-- host
-- os
-- env
+- `host`
+- `os`
+- `env`
 
-### Per-Host
+### `host`
 
-After [configuring a hostname](#setup-hostname) for your computer, you can use the `host` keyword to only include certain parts of `settings.json` or `keybindings.json`.
+After [configuring a hostname](#setup-hostname) for your computer, you can use the `host` keyword to only include certain parts of your configuration on that specific computer.
 
-```
+```json
 // settings.json on "home" computer
 
 {
   // @sync host=home
-  "window.zoomLevel": "1"
+  "window.zoomLevel": 1
 }
 ```
 
-### Per-OS
+### `os`
 
-The `os` keyword can also be used to only include certain parts of `settings.json` or `keybindings.json`.
+The `os` keyword can also be used to only include certain parts of your configuration.
 
 Currently, there are 3 operating systems supported:
 
@@ -62,63 +61,63 @@ Currently, there are 3 operating systems supported:
 - linux
 - mac
 
-```
+```json
 // settings.json on linux
 
 {
   // @sync os=linux
-  "window.zoomLevel": "1"
+  "window.zoomLevel": 1
 }
 ```
 
-### Per-Env
+### `env`
 
-Syncify can check for the existence of environmental variables using [`process.env`](https://nodejs.org/api/process.html#process_process_env) to only include certain parts of `settings.json` or `keybindings.json`.
+Syncify can check for the existence of environmental variables using [`process.env`](https://nodejs.org/api/process.html#process_process_env) to only include certain parts of your configuration.
 
-```
+```json
 // settings.json on a computer with the environmental variable "CODE_ZOOM_1" set
 
 {
   // @sync env=CODE_ZOOM_1
-  "window.zoomLevel": "1"
+  "window.zoomLevel": 1
 }
 ```
 
 ## Example Syntax
 
-### Settings (settings.json)
+### `settings.json`
 
-```
+```json
 // settings.json on "home" computer running Linux
 
 {
   // @sync host=home os=linux
-  "window.zoomLevel": "1",
+  "window.zoomLevel": 1
   // @sync host=work os=windows
   // "window.zoomLevel": "0",
 }
 ```
 
-```
+```json
 // settings.json on "work" computer running Windows
 
 {
   // @sync host=home os=linux
-  // "window.zoomLevel": "1",
+  // "window.zoomLevel": 1,
   // @sync host=work os=windows
-  "window.zoomLevel": "0",
+  "window.zoomLevel": "0"
 }
 ```
 
-```
+```json
 // settings.json on "work-pc" running Linux
 
 {
   // @sync os=linux host=work-pc
   "python.autoComplete.extraPaths": [
     "/blah/blah/python2.7/site-packages",
-    "/usr/lib/python2.7/site-packages",
-  ],
+    "/usr/lib/python2.7/site-packages"
+  ]
   // @sync os=windows host=home-pc
   // "python.autoComplete.extraPaths": [
   //   "C:\\Program Files\\blah\\site-packages",
@@ -126,9 +125,9 @@ Syncify can check for the existence of environmental variables using [`process.e
 }
 ```
 
-### Keybindings (keybindings.json)
+### `keybindings.json`
 
-```
+```json
 // keybindings.json on "home" computer running macOS
 
 [
@@ -137,7 +136,7 @@ Syncify can check for the existence of environmental variables using [`process.e
     "key": "alt+v",
     "command": "workbench.action.closeActiveEditor",
     "when": "editorTextFocus"
-  },
+  }
   // @sync host=work os=linux env=CODE_WORK
   // {
   //   "key": "alt+q",
@@ -147,7 +146,7 @@ Syncify can check for the existence of environmental variables using [`process.e
 ]
 ```
 
-```
+```json
 // keybindings.json on "work" computer running Linux
 
 [
