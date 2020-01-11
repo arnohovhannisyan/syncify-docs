@@ -59,7 +59,7 @@ function Home() {
 
   return (
     <Layout title={title}>
-      <header className={classnames("hero shadow--lw", styles.heroBanner)}>
+      <header className={classnames("hero", styles.heroBanner)}>
         <div className="container">
           <div>
             <img
