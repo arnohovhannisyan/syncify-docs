@@ -24,8 +24,7 @@ module.exports = {
           label: "GitHub",
           position: "left"
         }
-      ],
-      hideOnScroll: true
+      ]
     },
     footer: {
       links: [
