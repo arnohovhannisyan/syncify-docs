@@ -1,5 +1,5 @@
 ---
-title: Configuring
+title: Configuration
 ---
 
 ## Opening the Settings Page

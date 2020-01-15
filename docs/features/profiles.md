@@ -7,7 +7,7 @@ import TabItem from "@theme/TabItem";
 
 Syncify supports using profiles to have different settings for different occasions.
 
-> Note: Profiles are currently only supported using the default `Git` method
+> Note that profiles are currently only supported using the default `repo` syncer
 
 ## Creating a New Profile
 
@@ -26,7 +26,7 @@ Syncify supports using profiles to have different settings for different occasio
 
 1. Run `Syncify: Open Settings` in the command palette
 2. Click `Open file in editor`
-3. Add a new object to the `repo -> profiles` array with the following format
+3. Add a new object to the `repo.profiles` array with the following format
 
 ```json
 {

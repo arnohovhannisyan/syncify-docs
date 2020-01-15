@@ -6,9 +6,13 @@ module.exports = {
       items: [
         "getting-started/installation",
         "getting-started/prerequisites",
-        "getting-started/setup",
-        "getting-started/configuring"
+        "getting-started/setup"
       ]
+    },
+    {
+      type: "category",
+      label: "Syncers",
+      items: ["syncers/repo", "syncers/file"]
     },
     {
       type: "category",
@@ -25,6 +29,7 @@ module.exports = {
         "features/sync-pragmas"
       ]
     },
+    "configuration",
     "common-terms"
   ]
 };
