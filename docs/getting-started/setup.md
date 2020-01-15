@@ -2,10 +2,10 @@
 title: Setup
 ---
 
-## [Repo Syncer](../syncers/repo.mdx) (recommended)
+## [Repo Syncer](../syncers/repo.md) (recommended)
 
-Visit the [repo syncer setup guide](../syncers/repo.mdx#setup) to get started.
+Visit the [repo syncer setup guide](../syncers/repo.md#setup) to get started.
 
-## [File Syncer](../syncers/file.mdx)
+## [File Syncer](../syncers/file.md)
 
-Visit the [file syncer setup guide](../syncers/file.mdx#setup) to get started.
+Visit the [file syncer setup guide](../syncers/file.md#setup) to get started.

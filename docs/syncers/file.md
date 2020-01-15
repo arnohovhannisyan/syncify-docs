@@ -40,7 +40,7 @@ The `file` syncer syncs your VSCode configuration by exporting it to a specific 
 
 Example snippet from settings file:
 
-```json
+```json {3}
 {
   "file": {
     "path": "/some/absolute/path"

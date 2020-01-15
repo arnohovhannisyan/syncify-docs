@@ -167,4 +167,4 @@ Syncify can check for the existence of environmental variables using [`process.e
 
 ## Setup Hostname
 
-Visit the [Settings Guide](../getting-started/configuring.mdx#hostname) to learn how to configure the hostname.
+Visit the [Settings Guide](../getting-started/configuring.md#hostname) to learn how to configure the hostname.

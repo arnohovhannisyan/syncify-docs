@@ -40,4 +40,4 @@ Syncify supports syncing extensions that are not in the VSCode Marketplace.
 1. Uninstall the extension
 2. Run `Syncify: Upload` in the command palette to upload your changes
 
-[term:vsix]: ../common-terms.mdx#vsix-folder
+[term:vsix]: ../common-terms.md#vsix-folder

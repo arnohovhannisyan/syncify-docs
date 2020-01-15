@@ -60,7 +60,7 @@ Finally, open the Command Palette (`Ctrl`+`Shift`+`P`) and run `Syncify: Upload`
 
 Example snippet from settings file:
 
-```json
+```json {3}
 {
   "repo": {
     "url": "git@github.com:arnohovhannisyan/code-settings"
