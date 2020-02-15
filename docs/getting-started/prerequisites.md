@@ -8,7 +8,7 @@ These are the prerequisites for using the default `repo` syncer. For most people
 
 ### Install Git
 
-Navigate to https://git-scm.com to download and install the latest version of Git on your machine. Operating system-specific instructions can be found there.
+Navigate to https://git-scm.com/downloads to download and install the latest version of Git on your machine. Operating system-specific instructions can be found there.
 
 ### Configure Git
 
