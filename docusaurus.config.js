@@ -1,3 +1,4 @@
+/** @type {import("@docusaurus/types").DocusaurusConfig} */
 module.exports = {
   title: "Syncify",
   tagline: "A reliable way of syncing your VSCode settings and extensions",

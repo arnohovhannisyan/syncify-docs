@@ -1,11 +1,15 @@
 declare module "@docusaurus/useBaseUrl" {
-  export default (str: string) => 0 as string;
+  const exported: (str: string) => string;
+
+  export default exported;
 }
 
 declare module "@docusaurus/useDocusaurusContext" {
   import { DocusaurusContext } from "@docusaurus/types";
 
-  export default () => 0 as DocusaurusContext;
+  const exported: () => DocusaurusContext;
+
+  export default exported;
 }
 
 declare module "@docusaurus/Link" {
@@ -18,7 +22,9 @@ declare module "@docusaurus/Link" {
     to: string;
   }
 
-  export default (props: DefaultProps & ExtraProps) => 0 as JSX.Element;
+  const exported: (props: DefaultProps & ExtraProps) => JSX.Element;
+
+  export default exported;
 }
 
 declare module "@theme/Layout" {
@@ -37,11 +43,15 @@ declare module "@theme/Layout" {
     version?: string;
   }
 
-  export default (props: DefaultProps & ExtraProps) => 0 as JSX.Element;
+  const exported: (props: DefaultProps & ExtraProps) => JSX.Element;
+
+  export default exported;
 }
 
 declare module "*.css" {
-  export default 0 as any;
+  const exported: any;
+
+  export default exported;
 }
 
 interface Feature {

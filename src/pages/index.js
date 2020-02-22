@@ -55,7 +55,7 @@ function Feature({ imageUrl, title, description = "" }) {
 }
 
 function Home() {
-  const { title, tagline } = useDocusaurusContext().siteConfig;
+  const { title, tagline } = useDocusaurusContext().siteConfig ?? {};
 
   return (
     <Layout title={title}>
