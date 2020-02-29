@@ -8,10 +8,7 @@ Syncify supports syncing extensions that are not in the VSCode Marketplace.
 
 1. Copy the VSIX file to the [vsix folder][term:vsix], creating the folder if it doesn't already exist
 
-> The VSIX file's name should be one of the following:
->
-> - `publisher.extName.vsix`
-> - `publisher.extName-x.x.x.vsix` (x.x.x is the version)
+> The VSIX file's name should be in the following format: `publisher.extName.vsix`
 >
 > Replace `publisher.extName` with the extension's corresponding details.
 
