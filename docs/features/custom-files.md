@@ -12,6 +12,7 @@ import TabItem from "@theme/TabItem";
 <TabItem value="Using the GUI" default>
 
 1. Right-click a file and click `Syncify: Register Custom File`.
+2. Optionally rename the file
 
 </TabItem>
 
@@ -19,6 +20,7 @@ import TabItem from "@theme/TabItem";
 
 1. Run `Syncify: Register Custom File` in the command palette
 2. Select the file you want to register using the file picker
+3. Optionally rename the file
 
 </TabItem>
 
