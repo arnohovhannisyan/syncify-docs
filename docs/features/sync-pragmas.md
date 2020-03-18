@@ -2,47 +2,15 @@
 title: Sync Pragmas
 ---
 
-Syncify supports per-os, per-host, and per-env inline settings and keybindings by using Sync Pragmas.
+Sync Pragmas let you conditionally enable or disable settings for individual computers using a simple comment-based syntax.
 
-## Ignoring Certain Settings
+## `host`
 
-You can ignore certain properties in any `json` file by placing the `@sync-ignore` pragma above it.
+> Note that your computer's [hostname](../configuration.md#hostname) must be configured before using this keyword
 
-```json
-// settings.json
+### Example
 
-{
-  // @sync-ignore
-  "window.zoomLevel": 1 /* won't upload to gist */
-}
-```
-
-```json
-// keybindings.json
-
-[
-  // @sync-ignore
-  {
-    "key": "alt+v",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "editorTextFocus"
-  } /* won't upload to gist */
-]
-```
-
-## Keywords
-
-There are 3 different keywords that can be used with Sync Pragmas:
-
-- `host`
-- `os`
-- `env`
-
-### `host`
-
-After [configuring a hostname](#setup-hostname) for your computer, you can use the `host` keyword to only include certain parts of your configuration on that specific computer.
-
-```json
+```js
 // settings.json on "home" computer
 
 {
@@ -51,120 +19,120 @@ After [configuring a hostname](#setup-hostname) for your computer, you can use t
 }
 ```
 
-### `os`
-
-The `os` keyword can also be used to only include certain parts of your configuration.
+## `os`
 
 Currently, there are 3 operating systems supported:
 
-- windows
-- linux
-- mac
+- `windows`
+- `linux`
+- `mac`
 
-```json
+### Example
+
+```js
 // settings.json on linux
 
 {
-  // @sync os=linux
-  "window.zoomLevel": 1
+	// @sync os=linux
+	"window.zoomLevel": 1
 }
 ```
 
-### `env`
+## `env`
 
-Syncify can check for the existence of environmental variables using [`process.env`](https://nodejs.org/api/process.html#process_process_env) to only include certain parts of your configuration.
+### How it works
 
-```json
+Syncify can enable certain settings based on if the environmental variable required by the setting is set.
+
+### Example
+
+```js
 // settings.json on a computer with the environmental variable "CODE_ZOOM_1" set
 
 {
-  // @sync env=CODE_ZOOM_1
-  "window.zoomLevel": 1
+	// @sync env=CODE_ZOOM_1
+	"window.zoomLevel": 1
 }
 ```
 
-## Example Syntax
+## More Examples
 
 ### `settings.json`
 
-```json
+```js
 // settings.json on "home" computer running Linux
 
 {
-  // @sync host=home os=linux
-  "window.zoomLevel": 1
-  // @sync host=work os=windows
-  // "window.zoomLevel": "0",
+	// @sync host=home os=linux
+	"window.zoomLevel": 1,
+	// @sync host=work os=windows
+	// "window.zoomLevel": 0,
 }
 ```
 
-```json
+```js
 // settings.json on "work" computer running Windows
 
 {
-  // @sync host=home os=linux
-  // "window.zoomLevel": 1,
-  // @sync host=work os=windows
-  "window.zoomLevel": "0"
+	// @sync host=home os=linux
+	// "window.zoomLevel": 1,
+	// @sync host=work os=windows
+	"window.zoomLevel": 0
 }
 ```
 
-```json
+```js
 // settings.json on "work-pc" running Linux
 
 {
-  // @sync os=linux host=work-pc
-  "python.autoComplete.extraPaths": [
-    "/blah/blah/python2.7/site-packages",
-    "/usr/lib/python2.7/site-packages"
-  ]
-  // @sync os=windows host=home-pc
-  // "python.autoComplete.extraPaths": [
-  //   "C:\\Program Files\\blah\\site-packages",
-  // ],
+	// @sync os=linux host=work-pc
+	"python.autoComplete.extraPaths": [
+		"/blah/blah/python2.7/site-packages",
+		"/usr/lib/python2.7/site-packages"
+	],
+	// @sync os=windows host=home-pc
+	// "python.autoComplete.extraPaths": [
+	//   "C:\\Program Files\\blah\\site-packages",
+	// ],
 }
 ```
 
 ### `keybindings.json`
 
-```json
+```js
 // keybindings.json on "home" computer running macOS
 
 [
-  // @sync host=home os=mac
-  {
-    "key": "alt+v",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "editorTextFocus"
-  }
-  // @sync host=work os=linux env=CODE_WORK
-  // {
-  //   "key": "alt+q",
-  //   "command": "workbench.action.closeActiveEditor",
-  //   "when": "editorTextFocus"
-  // }
-]
+	// @sync host=home os=mac
+	{
+		key: "alt+v",
+		command: "workbench.action.closeActiveEditor",
+		when: "editorTextFocus"
+	}
+	// @sync host=work os=linux env=CODE_WORK
+	// {
+	//   "key": "alt+q",
+	//   "command": "workbench.action.closeActiveEditor",
+	//   "when": "editorTextFocus"
+	// }
+];
 ```
 
-```json
+```js
 // keybindings.json on "work" computer running Linux
 
 [
-  // @sync host=home os=mac
-  // {
-  //   "key": "alt+v",
-  //   "command": "workbench.action.closeActiveEditor",
-  //   "when": "editorTextFocus"
-  // },
-  // @sync host=work os=linux env=CODE_WORK
-  {
-    "key": "alt+q",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "editorTextFocus"
-  }
-]
+	// @sync host=home os=mac
+	// {
+	//   "key": "alt+v",
+	//   "command": "workbench.action.closeActiveEditor",
+	//   "when": "editorTextFocus"
+	// },
+	// @sync host=work os=linux env=CODE_WORK
+	{
+		key: "alt+q",
+		command: "workbench.action.closeActiveEditor",
+		when: "editorTextFocus"
+	}
+];
 ```
-
-## Setup Hostname
-
-Make sure to set your [hostname](../configuration.md#hostname) before using the `host` keyword.
