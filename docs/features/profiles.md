@@ -30,8 +30,8 @@ Syncify supports using profiles to have different settings for different occasio
 
 ```json
 {
-  "branch": "[BRANCH]",
-  "name": "[NAME]"
+	"branch": "[BRANCH]",
+	"name": "[NAME]"
 }
 ```
 
@@ -46,26 +46,26 @@ Syncify supports using profiles to have different settings for different occasio
 1. Run `Syncify: Switch profile` in the command palette
 2. Select the profile you want to switch to
 
-> After switching the current profile using the command, Syncify will automatically download the new settings. If this is not what you want, change the current profile manually or using the Settings GUI.
+> After switching the current profile using the command, Syncify will prompt you to download the new settings.
 
 ## Example Configuration
 
 ```json
 {
-  "syncer": "repo",
-  "repo": {
-    "url": "...",
-    "profiles": [
-      {
-        "branch": "master",
-        "name": "main"
-      },
-      {
-        "branch": "react",
-        "name": "react-tools"
-      }
-    ],
-    "currentProfile": "react-tools"
-  }
+	"syncer": "repo",
+	"repo": {
+		"url": "...",
+		"profiles": [
+			{
+				"branch": "master",
+				"name": "main"
+			},
+			{
+				"branch": "react",
+				"name": "react-tools"
+			}
+		],
+		"currentProfile": "react-tools"
+	}
 }
 ```
