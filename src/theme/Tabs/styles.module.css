@@ -6,5 +6,5 @@
  */
 
 .tabItem:focus {
-  background-color: var(--ifm-hover-overlay);
+	background-color: var(--ifm-hover-overlay);
 }

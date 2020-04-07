@@ -32,8 +32,8 @@ Type:
 
 ```ts
 Array<{
-  branch: string,
-  name: string
+	branch: string,
+	name: string
 }>
 ```
 

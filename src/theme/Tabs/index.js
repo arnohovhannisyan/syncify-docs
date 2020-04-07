@@ -12,93 +12,93 @@ import classnames from "classnames";
 import styles from "./styles.module.css";
 
 const keys = {
-  left: 37,
-  right: 39
+	left: 37,
+	right: 39,
 };
 
 /**
  * @param {{ block: boolean, children: JSX.Element[] }} props
  */
 function Tabs({ block, children }) {
-  const values = children.map(node => ({
-    label: node.props.value,
-    value: node.props.value
-  }));
+	const values = children.map((node) => ({
+		label: node.props.value,
+		value: node.props.value,
+	}));
 
-  const defaultNode = children.find(node => node.props.default);
+	const defaultNode = children.find((node) => node.props.default);
 
-  const [selectedValue, setSelectedValue] = useState(defaultNode.props.value);
-  const tabRefs = [];
+	const [selectedValue, setSelectedValue] = useState(defaultNode.props.value);
+	const tabRefs = [];
 
-  const focusNextTab = (tabs, target) => {
-    const next = tabs.indexOf(target) + 1;
+	const focusNextTab = (tabs, target) => {
+		const next = tabs.indexOf(target) + 1;
 
-    if (!tabs[next]) {
-      tabs[0].focus();
-    } else {
-      tabs[next].focus();
-    }
-  };
+		if (!tabs[next]) {
+			tabs[0].focus();
+		} else {
+			tabs[next].focus();
+		}
+	};
 
-  const focusPreviousTab = (tabs, target) => {
-    const prev = tabs.indexOf(target) - 1;
+	const focusPreviousTab = (tabs, target) => {
+		const prev = tabs.indexOf(target) - 1;
 
-    if (!tabs[prev]) {
-      tabs[tabs.length - 1].focus();
-    } else {
-      tabs[prev].focus();
-    }
-  };
+		if (!tabs[prev]) {
+			tabs[tabs.length - 1].focus();
+		} else {
+			tabs[prev].focus();
+		}
+	};
 
-  const handleKeydown = (tabs, target, event) => {
-    switch (event.keyCode) {
-      case keys.right:
-        focusNextTab(tabs, target);
-        break;
-      case keys.left:
-        focusPreviousTab(tabs, target);
-        break;
-      default:
-        break;
-    }
-  };
+	const handleKeydown = (tabs, target, event) => {
+		switch (event.keyCode) {
+			case keys.right:
+				focusNextTab(tabs, target);
+				break;
+			case keys.left:
+				focusPreviousTab(tabs, target);
+				break;
+			default:
+				break;
+		}
+	};
 
-  return (
-    <div>
-      <ul
-        role="tablist"
-        aria-orientation="horizontal"
-        className={classnames("tabs", {
-          "tabs--block": block
-        })}
-      >
-        {values.map(({ value, label }) => (
-          <li
-            role="tab"
-            tabIndex={0}
-            aria-selected={selectedValue === value}
-            className={classnames("tab-item", styles.tabItem, {
-              "tab-item--active": selectedValue === value
-            })}
-            key={value}
-            ref={tabControl => tabRefs.push(tabControl)}
-            onKeyDown={event => handleKeydown(tabRefs, event.target, event)}
-            onFocus={() => setSelectedValue(value)}
-            onClick={() => setSelectedValue(value)}
-          >
-            {label}
-          </li>
-        ))}
-      </ul>
-      <div role="tabpanel" className="margin-vert--md">
-        {
-          Children.toArray(children).filter(
-            child => child.props.value === selectedValue
-          )[0]
-        }
-      </div>
-    </div>
-  );
+	return (
+		<div>
+			<ul
+				role="tablist"
+				aria-orientation="horizontal"
+				className={classnames("tabs", {
+					"tabs--block": block,
+				})}
+			>
+				{values.map(({ value, label }) => (
+					<li
+						role="tab"
+						tabIndex={0}
+						aria-selected={selectedValue === value}
+						className={classnames("tab-item", styles.tabItem, {
+							"tab-item--active": selectedValue === value,
+						})}
+						key={value}
+						ref={(tabControl) => tabRefs.push(tabControl)}
+						onKeyDown={(event) => handleKeydown(tabRefs, event.target, event)}
+						onFocus={() => setSelectedValue(value)}
+						onClick={() => setSelectedValue(value)}
+					>
+						{label}
+					</li>
+				))}
+			</ul>
+			<div role="tabpanel" className="margin-vert--md">
+				{
+					Children.toArray(children).filter(
+						(child) => child.props.value === selectedValue
+					)[0]
+				}
+			</div>
+		</div>
+	);
 }
 
 export default Tabs;

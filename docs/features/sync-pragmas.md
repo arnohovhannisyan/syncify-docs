@@ -107,8 +107,8 @@ Syncify can enable certain settings based on if the environmental variable requi
 	{
 		key: "alt+v",
 		command: "workbench.action.closeActiveEditor",
-		when: "editorTextFocus"
-	}
+		when: "editorTextFocus",
+	},
 	// @sync host=work os=linux env=CODE_WORK
 	// {
 	//   "key": "alt+q",
@@ -132,7 +132,7 @@ Syncify can enable certain settings based on if the environmental variable requi
 	{
 		key: "alt+q",
 		command: "workbench.action.closeActiveEditor",
-		when: "editorTextFocus"
-	}
+		when: "editorTextFocus",
+	},
 ];
 ```

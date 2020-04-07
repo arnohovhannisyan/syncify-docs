@@ -62,9 +62,9 @@ Example snippet from settings file:
 
 ```json {3}
 {
-  "repo": {
-    "url": "git@github.com:arnohovhannisyan/code-settings"
-  }
+	"repo": {
+		"url": "git@github.com:arnohovhannisyan/code-settings"
+	}
 }
 ```
 

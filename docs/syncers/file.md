@@ -42,9 +42,9 @@ Example snippet from settings file:
 
 ```json {3}
 {
-  "file": {
-    "path": "/some/absolute/path"
-  }
+	"file": {
+		"path": "/some/absolute/path"
+	}
 }
 ```
 
