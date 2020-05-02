@@ -55,13 +55,12 @@ module.exports = {
 					title: "Community",
 					items: [
 						{
-							label: "Discord",
-							href: "https://discord.gg/DGvuqWD",
+							label: "Spectrum",
+							href: "https://spectrum.chat/vscode-syncify",
 						},
 						{
-							label: "Slack",
-							href:
-								"https://join.slack.com/t/vscode-syncify/shared_invite/enQtNzc5MjYyMjYyNzEwLWQ5MGMxNDljZjk5NmYwNWZlYTBmYjk0MjliNjgyYWRkM2NiYjU2YjExY2RmODg2MGIyZTUwY2YzYWM2YThjMmM",
+							label: "Discord",
+							href: "https://discord.gg/DwFKj57",
 						},
 					],
 				},
